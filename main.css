@@ -20,13 +20,9 @@ body {
 	margin: 10vw 0 0 9.5vw;
 }
 
-.landing__content--container h1,
-.landing__content--container p {
-	color: white;
-	margin: 0;
-}
-
 .landing__content--container h1 {
+	margin: 0;
+	color: #fff;
 	opacity: 1;
 	transition: opacity 500ms linear;
 	animation: slideInRight 0.5s forwards;
@@ -39,8 +35,13 @@ body {
 	transition: opacity 250ms linear !important;
 }
 
-.landing__content--container p {
+#expand {
 	cursor: pointer;
+	color: #fff;
+}
+
+#expand img:active {
+	transform: scale(0.85);
 }
 
 .details__container {
@@ -61,11 +62,59 @@ body {
 
 .details__container--box {
 	background-color: #fff;
-	height: 60vh;
+	height: auto;
+	max-height: 75vh;
 	width: 80vw;
 	position: absolute;
 	visibility: hidden;
 	transform: scale(0, 0);
+	padding: 1% 2% 2% 2%;
+	overflow-y: scroll;
+	bottom: 15vh;
+	box-shadow: rgba(0, 0, 0, 0.6) -1px 2px 19px;
+}
+
+.details__box--svg {
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.details__box--svg:active {
+	transform: scale(0.85);
+}
+
+.details__container--box h2 {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 8vw;
+	color: #611818;
+	margin-bottom: 0;
+}
+
+.details__container--box hr {
+	background: linear-gradient(to right, #611818, #fff);
+	height: 3px !important;
+	opacity: 1;
+	width: 55%;
+	margin: 0.75rem 0 1rem 0;
+}
+
+.details__container--box p {
+	color: #2a2a2a;
+	font-size: 0.8rem;
+	margin-bottom: 2rem;
+}
+
+.details__container--box button {
+	color: #fff;
+	border: 1px solid #a09393;
+	border-radius: 0;
+	background: linear-gradient(to right, #611818, #a16856);
+	text-transform: uppercase;
+	padding: 10px 50px;
+}
+
+.details__container--box button:hover {
+	color: #fff;
 }
 
 .js-expand {
@@ -115,7 +164,8 @@ body {
 	.details__container--box {
 		margin: -4vw 0 0 5vw;
 		width: 50vw;
-		height: 50vh;
+		max-height: 60vh;
+		bottom: unset;
 	}
 }
 
@@ -123,10 +173,15 @@ body {
 	.details__container {
 		margin: -4vw 0 0 5vw;
 		font-size: 2.25vw;
+		max-height: 50vh;
 	}
 
 	.details__container img {
 		height: 2.5vw;
+	}
+
+	.details__container--box h2 {
+		font-size: 4vw;
 	}
 }
 
@@ -137,7 +192,7 @@ body {
 
 	.details__container--box {
 		width: 37vw;
-		height: 60vh;
+		max-height: 65vh;
 	}
 }
 
@@ -148,5 +203,9 @@ body {
 
 	.details__container {
 		font-size: 1.5vw;
+	}
+
+	.details__container--box {
+		height: 60vh;
 	}
 }
