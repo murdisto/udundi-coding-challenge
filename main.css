@@ -19,13 +19,6 @@ body {
 .landing__content--container {
 	margin: 10vw 0 0 9.5vw;
 }
-/* 
-.landing__content--container h1 {
-	opacity: 0;
-	transition: opacity 1000ms;
-	animation-delay: 1s;
-	animation: slideInRight 1s forwards;
-} */
 
 .landing__content--container h1,
 .landing__content--container p {
@@ -34,8 +27,16 @@ body {
 }
 
 .landing__content--container h1 {
+	opacity: 1;
+	transition: opacity 500ms linear;
+	animation: slideInRight 0.5s forwards;
 	font-size: 20vw;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.js-fadeToggle {
+	opacity: 0 !important;
+	transition: opacity 250ms linear !important;
 }
 
 .landing__content--container p {
@@ -45,10 +46,9 @@ body {
 .details__container {
 	margin: -1vw 0 0 0;
 	width: fit-content;
-	/* opacity: 0;
-	transition: opacity 1000ms;
-	animation-delay: 1s;
-	animation: slideInUp 1s forwards; */
+	opacity: 1;
+	transition: opacity 500ms;
+	animation: slideInUp 1s forwards;
 }
 
 .details__container span {
@@ -65,19 +65,29 @@ body {
 	width: 80vw;
 	position: absolute;
 	visibility: hidden;
+	transform: scale(0, 0);
 }
 
 .js-expand {
 	visibility: visible;
+	transition: transform 0.25s ease-in;
+	transform: scale(1, 1);
+	transform-origin: bottom left;
 }
 
-/* @keyframes slideInRight {
+.js-collapse {
+	visibility: visible;
+	transition: transform 0.25s ease-in;
+	transform: scale(0, 0);
+	transform-origin: bottom left;
+}
+
+@keyframes slideInRight {
 	0% {
 		transform: translateX(-20%);
 	}
 	100% {
 		transform: translateX(0);
-		opacity: 1;
 	}
 }
 
@@ -86,10 +96,9 @@ body {
 		transform: translateY(200px);
 	}
 	100% {
-		transform: translateX(0);
 		opacity: 1;
 	}
-} */
+}
 
 /* ////////////////////////// Media Queries ///////////////////////////  */
 
