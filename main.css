@@ -19,17 +19,18 @@ body {
 .landing__content--container {
 	margin: 10vw 0 0 9.5vw;
 }
-
+/* 
 .landing__content--container h1 {
 	opacity: 0;
 	transition: opacity 1000ms;
 	animation-delay: 1s;
 	animation: slideInRight 1s forwards;
-}
+} */
 
 .landing__content--container h1,
 .landing__content--container p {
 	color: white;
+	margin: 0;
 }
 
 .landing__content--container h1 {
@@ -37,27 +38,40 @@ body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.details__button--container {
-	margin: -1vw 0 0 0;
-	opacity: 0;
-	transition: opacity 1000ms;
-	animation-delay: 1s;
-	animation: slideInUp 1s forwards;
+.landing__content--container p {
+	cursor: pointer;
 }
 
-.details__button--container span {
+.details__container {
+	margin: -1vw 0 0 0;
+	width: fit-content;
+	/* opacity: 0;
+	transition: opacity 1000ms;
+	animation-delay: 1s;
+	animation: slideInUp 1s forwards; */
+}
+
+.details__container span {
 	margin-left: 1vw;
 }
 
-.details__button--container img {
-	height: 7.5vw;
-}
-
-.details__button--container {
+.details__container {
 	font-size: 5.25vw;
 }
 
-@keyframes slideInRight {
+.details__container--box {
+	background-color: #fff;
+	height: 60vh;
+	width: 80vw;
+	position: absolute;
+	visibility: hidden;
+}
+
+.js-expand {
+	visibility: visible;
+}
+
+/* @keyframes slideInRight {
 	0% {
 		transform: translateX(-20%);
 	}
@@ -75,44 +89,55 @@ body {
 		transform: translateX(0);
 		opacity: 1;
 	}
-}
+} */
 
 /* ////////////////////////// Media Queries ///////////////////////////  */
 
 @media (min-width: 575px) {
-	.details__button--container {
+	.details__container {
 		margin: -4vw 0 0 0;
 		font-size: 3vw;
 	}
 
-	.details__button--container img {
+	.details__container img {
 		height: 3.5vw;
+	}
+
+	.details__container--box {
+		margin: -4vw 0 0 5vw;
+		width: 50vw;
+		height: 50vh;
 	}
 }
 
 @media (min-width: 768px) {
-	.details__button--container {
+	.details__container {
 		margin: -4vw 0 0 5vw;
 		font-size: 2.25vw;
 	}
 
-	.details__button--container img {
+	.details__container img {
 		height: 2.5vw;
 	}
 }
 
-@media (min-width: 1024px) {
-	.details__button--container {
+@media (min-width: 1025px) {
+	.details__container {
 		font-size: 1.75vw;
+	}
+
+	.details__container--box {
+		width: 37vw;
+		height: 60vh;
 	}
 }
 
 @media (min-width: 1366px) {
-	.details__button--container img {
+	.details__container img {
 		height: 2vw;
 	}
 
-	.details__button--container {
+	.details__container {
 		font-size: 1.5vw;
 	}
 }

@@ -15,14 +15,19 @@
   <main>
     <section class="landing container-fluid">
       <section class="col-sm-4 d-flex landing__content">
-        <div class="landing__content--container align-self-center">
+        <div class="landing__content--container d-flex flex-column align-self-center justify-content-end">
           <h1>Explore</h1>
-          <div class="details__button--container">
-            <p>
+          <div class="details__container ">
+            <p id="expand">
               <img src="assets/Plus.svg" alt="plus symbol icon">
-
               <span class="align-middle">More Details</span>
             </p>
+
+          </div>
+          <div class="details__container--box " id="box">
+            <div class="d-flex flex-row justify-content-end" id="collapse">
+              <span>X</span>
+            </div>
           </div>
         </div>
       </section>
