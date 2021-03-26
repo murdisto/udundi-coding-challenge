@@ -44,7 +44,7 @@ body {
 	transform: scale(0.85);
 }
 
-.details__container {
+.details__toggle {
 	margin: -1vw 0 0 0;
 	width: fit-content;
 	opacity: 1;
@@ -52,15 +52,11 @@ body {
 	animation: slideInUp 1s forwards;
 }
 
-.details__container span {
+.details__toggle span {
 	margin-left: 1vw;
 }
 
-.details__container {
-	font-size: 5.25vw;
-}
-
-.details__container--box {
+.details__box {
 	background-color: #fff;
 	height: auto;
 	max-height: 75vh;
@@ -83,14 +79,14 @@ body {
 	transform: scale(0.85);
 }
 
-.details__container--box h2 {
+.details__box h2 {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 8vw;
 	color: #611818;
 	margin-bottom: 0;
 }
 
-.details__container--box hr {
+.details__box hr {
 	background: linear-gradient(to right, #611818, #fff);
 	height: 3px !important;
 	opacity: 1;
@@ -98,13 +94,13 @@ body {
 	margin: 0.75rem 0 1rem 0;
 }
 
-.details__container--box p {
+.details__box p {
 	color: #2a2a2a;
 	font-size: 0.8rem;
 	margin-bottom: 2rem;
 }
 
-.details__container--box button {
+.details__box button {
 	color: #fff;
 	border: 1px solid #a09393;
 	border-radius: 0;
@@ -113,7 +109,7 @@ body {
 	padding: 10px 50px;
 }
 
-.details__container--box button:hover {
+.details__box button:hover {
 	color: #fff;
 }
 
@@ -174,11 +170,11 @@ footer img {
 		font-size: 3vw;
 	}
 
-	.details__container img {
+	.details__toggle img {
 		height: 3.5vw;
 	}
 
-	.details__container--box {
+	.details__box {
 		margin: -4vw 0 0 5vw;
 		width: 50vw;
 		max-height: 60vh;
@@ -192,42 +188,42 @@ footer img {
 }
 
 @media (min-width: 768px) {
-	.details__container {
+	.details__toggle {
 		margin: -4vw 0 0 5vw;
 		font-size: 2.25vw;
 		max-height: 50vh;
 	}
 
-	.details__container img {
+	.details__toggle img {
 		height: 2.5vw;
 	}
 
-	.details__container--box h2 {
+	.details__box h2 {
 		font-size: 4vw;
 	}
 }
 
 @media (min-width: 1025px) {
-	.details__container {
+	.details__toggle {
 		font-size: 1.75vw;
 	}
 
-	.details__container--box {
+	.details__box {
 		width: 37vw;
 		max-height: 65vh;
 	}
 }
 
 @media (min-width: 1366px) {
-	.details__container img {
+	.details__toggle img {
 		height: 2vw;
 	}
 
-	.details__container {
+	.details__toggle {
 		font-size: 1.5vw;
 	}
 
-	.details__container--box {
+	.details__box {
 		height: 60vh;
 	}
 }
